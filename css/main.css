@@ -17,7 +17,6 @@
           flex-direction: column;
   width: 100vw;
   height: 100vh;
-  max-width: 100%;
   padding: 55px 0;
   background: url(../img/166300-graficeskij_dizajn-dizajn-svet-purpur-fioletovyj-1920x1080.jpg);
   background-size: cover;
@@ -138,6 +137,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -145,16 +146,26 @@
   margin-left: auto;
 }
 
-.app .boards .add__btn {
-  background-color: rgba(30, 212, 233, 0.7);
+.app .boards__item .add__btn {
+  height: 30px;
+  background: rgba(253, 3, 241, 0.6);
   border-radius: 3px;
-  padding: 10px;
-  margin: 4px 0;
-  cursor: pointer;
-  font-weight: 400;
-  font-size: 14px;
-  outline: none;
-  border: none;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+  color: white;
+}
+
+.app .boards__item .add__btn span {
+  font-size: 20px;
+  margin-right: 10px;
+  color: wheat;
 }
 
 .app .button {

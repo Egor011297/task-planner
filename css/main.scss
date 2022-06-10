@@ -11,7 +11,6 @@
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    max-width: 100%;
     padding: 55px 0;
     background: url(../img/166300-graficeskij_dizajn-dizajn-svet-purpur-fioletovyj-1920x1080.jpg);
     background-size: cover;
@@ -95,26 +94,32 @@
                         border-radius: 3px;
                         display: flex;
                         justify-content: center;
+                        flex-shrink: 0;
                         align-items: center;
                         width: 95px;
                         margin-left: auto;
                     }
                 }
             }
+            
+        .add__btn {
+            height: 30px;
+            background: rgba($color: #fd03f1, $alpha: 0.6);
+            border-radius: 3px;
+            margin-top: 5px;
+            display: flex;
+            font-size: 12px;
+            align-items: center;
+            padding-left: 10px;
+            color: white;
+            span {
+                font-size: 20px;
+                margin-right: 10px;
+                color: wheat;
+            }
+        }
         }
 
-        .add__btn {
-            // color: white;
-            background-color: rgba($color: #1ed4e9, $alpha: 0.7);
-            border-radius:3px;
-            padding: 10px;
-            margin: 4px 0;
-            cursor: pointer;
-            font-weight: 400;
-            font-size: 14px;
-            outline: none;
-            border: none;
-        }
     }
     .button {
         height: 35px;
