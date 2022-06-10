@@ -1,6 +1,6 @@
 //Добавление задача//
 
-const lists = document.querySelectorAll('.list');
+const lists = document.querySelectorAll('.list')
 
 //Функция по добавлению наших элементов списка//
 function addTask() {
