@@ -1,7 +1,7 @@
-//Добавление задача//
+//Добавление задач//
 
-const lists = document.querySelectorAll('.list')
-
+const lists = document.querySelectorAll('.list');
+const button = document.querySelector('.button');
 //Функция по добавлению наших элементов списка//
 function addTask() {
     const btn = document.querySelector('.add__btn');
@@ -53,3 +53,38 @@ function addTask() {
 }
 
 addTask ();
+
+
+//Добваление досок!//
+
+function addBoard() {
+    const boards = document.querySelector('.boards');
+    const board = document.createElement('div');
+    board.classList.add('boards__item');
+    board.innerHTML = `
+        <span contenteditable="true" class="title">Введите название</span>
+        <div class="list"></div>
+    `;
+    boards.append(board);
+
+    changeTitle(); 
+}
+button.addEventListener('click', addBoard);
+
+
+
+//Функция для удаления текста title при клике
+function changeTitle() {
+    const titles = document.querySelectorAll('.title');
+
+    titles.forEach( title => {
+        title.addEventListener('click', e => e.target.textContent = '');
+    });
+
+}
+changeTitle();
+
+
+//Добавление DragNDrop//
+
+
